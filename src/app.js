@@ -57,7 +57,7 @@ forecastHTML = forecastHTML + `</div>`;
 
 function getForecast(coordinates) {
   let apiKey = "b3e1522d82584110f6073765cb9a8c79";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
@@ -110,8 +110,7 @@ function displayFahrenheitTemperature(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handlesubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
 
 
 search("New York");
